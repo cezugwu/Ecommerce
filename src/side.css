@@ -1,0 +1,42 @@
+@media screen and (max-width: 200px) {
+    .side {
+        width: 200px;
+        background-color: brown;
+    }
+}
+
+@media screen and (min-width: 200px) {
+    .side {
+        width: 250px;
+        background-color: brown;
+    }
+}
+
+.side .item {
+    position: relative;
+    left: 50%;
+    filter: blur(10px);
+    filter: opacity(0%);
+    animation: slide 1s ease-in-out forwards;
+}
+
+@keyframes slide {
+    to {
+        left: 0px;
+        filter: blur(0);
+        filter: opacity(100%);
+    }
+}
+
+.side .item1 {
+    animation-delay: 0s;
+}
+.side .item2 {
+    animation-delay: 0.1s;
+}
+.side .item3 {
+    animation-delay: 0.2s;
+}
+.side .item4 {
+    animation-delay: 0.3s;
+}
