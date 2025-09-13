@@ -13,7 +13,7 @@ const Hero = () => {
             </div>
         </div>
         <div className='relative hidden md:block'>
-            <img src="./w.png" className='relative w-[350px] object-cover z-10' />
+            <img src="https://cezugwu.github.io/Ecommerce/w.png" className='relative w-[350px] object-cover z-10' />
             <div className='absolute w-[250px] h-[250px] rounded-full bg-gray-300 -top-2'></div>
             <Star className='text-gray-400 absolute top-0' />
         </div>

@@ -138,7 +138,7 @@ const Body = () => {
 
       <div className='w-full flex flex-col md:flex-row-reverse justify-around gap-16 items-center md:px-10 my-20'>
           <div className='md:w-[40%] w-full flex justify-center'>
-              <img src="../s.png" className='w-[350px] object-cover z-10' />
+              <img src="https://cezugwu.github.io/Ecommerce/s.png" className='w-[350px] object-cover z-10' />
           </div>
           <div className='space-y-2 capitalize md:w-[60%] w-full px-10'>
               <div className='text-[2em] font-bold'>Browse our fashion paradise!</div>
