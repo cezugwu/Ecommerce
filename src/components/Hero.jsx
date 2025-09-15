@@ -3,7 +3,7 @@ import { } from 'react'
 
 const Hero = () => {
   return(
-    <div className='w-full h-[300px] flex justify-around items-center mt-20'>
+    <div className='w-full flex justify-around items-center mt-20 py-20'>
         <div className='space-y-2'>
             <div className='text-[2em] font-bold'>Fresh Arrivals Online</div>
             <div>Discver Our Newest Collection Tody</div>

@@ -10,8 +10,8 @@ const Footer = () => {
           <p className='text-gray-600 text-[0.85em]'>We love surprise our subscribers with occasional gifts.</p>
         </div>
         <div className='flex items-center gap-4'>
-          <input type="text" className='w-[300px] h-10 outline-none border border-gray-800 rounded-md px-2' name="" id="" />
-          <div className='bg-black h-10 text-white font-bold flex items-center px-4 rounded-md'>Subscribe</div>
+          <input type="text" className='w-[300px] h-10 outline-none border border-gray-800 rounded-md px-2 font-jost' name="" id="" />
+          <div className='bg-black h-10 text-white font-bold flex items-center px-4 rounded-md cursor-pointer select-none'>Subscribe</div>
         </div>
       </div>
 

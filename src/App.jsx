@@ -8,21 +8,21 @@ import Side from './components/Side';
 import SideProvider from './context/SideContext';
 import Body from './components/Body';
 import Footer from './components/Footer';
+import LinkBoard from './components/LinkBoard';
 
 const App = () => {
   return(
     <div>
       <Router>
         <SideProvider>
-        <Header />
-        <Hero />
+        <Header />  
+        <LinkBoard />
         <Side />
-        <Body />
-        <Footer />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='product/' element={<Product />} />
+          <Route path='Ecommerce/' element={<Home />} />
+          <Route path='Ecommerce/product/' element={<Product />} />
         </Routes>
+        <Footer />
         </SideProvider>
       </Router>
     </div>

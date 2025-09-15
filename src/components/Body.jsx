@@ -57,7 +57,6 @@ const Body = () => {
   const boxRef1 = useRef(null);
   const boxRef2 = useRef(null);
   const boxRef3 = useRef(null);
-  const [on, setOn] = useState(false);
   const [option, setOption] = useState("Featured");
 
   const startX = useRef(0);
@@ -88,7 +87,7 @@ const Body = () => {
   
   return(
     <div>
-      <div className='bg-white py-28'>
+      <div className='bg-white py-20'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-4'>
           <div className='space-y-4'>
             <Car className='bg-gray-300 p-2 size-11 rounded-full' strokeWidth={1.5} />
@@ -119,10 +118,10 @@ const Body = () => {
           </div>
 
           <div onMouseDown={(e) => mouseDown(e, boxRef1)} onMouseMove={(e) => mouseMove(e, boxRef1)} onMouseUp={mouseUp} onMouseLeave={mouseLeave}
-          ref={boxRef1} className={`${grab ? 'cursor-grabbing' : 'cursor-grab'} w-full overflow-auto scrollbar-hide`}>
-            <div className='pt-20 flex gap-12 w-fit mx-auto'>
+          ref={boxRef1} className={`${grab ? 'cursor-grabbing' : 'cursor-grab'} w-full overflow-auto scrollbar-hide pt-20`}>
+            <div className='flex gap-12 w-fit mx-auto p-4'>
               {best.map((item, index) => 
-                <div key={index} className='w-[200px] space-y-1 pb-2 px-2'>
+                <div key={index} className='w-[200px] space-y-1'>
                   <img src={item.image} className='w-full h-[250px] object-cover' />
                   <p className='capitalize font-medium text-[0.95em]'>{item.title}</p>
                   <div className='flex gap-8 items-center'>
@@ -136,7 +135,7 @@ const Body = () => {
         </div>
       </div>
 
-      <div className='w-full flex flex-col md:flex-row-reverse justify-around gap-16 items-center md:px-10 my-20'>
+      <div className='w-full flex flex-col md:flex-row-reverse justify-around gap-16 items-center md:px-10 py-20'>
           <div className='md:w-[40%] w-full flex justify-center'>
               <img src="https://cezugwu.github.io/Ecommerce/s.png" className='w-[350px] object-cover z-10' />
           </div>
@@ -152,7 +151,7 @@ const Body = () => {
           </div>
       </div>
 
-      <div className='py-10 bg-white'>
+      <div className='py-20 bg-white'>
         <div className='w-full'>
           <div className="flex gap-16 justify-center items-center py-5">
             {options.map((item, index) => (
