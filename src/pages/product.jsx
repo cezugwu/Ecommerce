@@ -7,7 +7,7 @@ import Recommend from "../components/Recommend";
 
 const Product = () => {
   const items = [
-    "https://ae-pic-a1.aliexpress-media.com/kf/S1e148ab0268349b28c09794bd13f07878.jpg_960x960q75.jpg_.avif",
+    "http://ae-pic-a1.aliexpress-media.com/kf/S1e148ab0268349b28c09794bd13f07878.jpg_960x960q75.jpg_.avif",
     "https://ae-pic-a1.aliexpress-media.com/kf/Sdfa1fb3090d64b43a802245feb2678c7H.jpg_960x960q75.jpg_.avif",
     "https://ae-pic-a1.aliexpress-media.com/kf/S2de8237c68bc49bf945e519b7b3c14e6q.jpg_960x960q75.jpg_.avif",
     "https://ae-pic-a1.aliexpress-media.com/kf/S944766c8221041fc8b5581dbfb106244i.jpg_960x960q75.jpg_.avif",
