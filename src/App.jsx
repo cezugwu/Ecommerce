@@ -1,5 +1,5 @@
-import { } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// App.jsx
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Product from './pages/product';
 import Header from './components/Header';
@@ -11,18 +11,18 @@ import Footer from './components/Footer';
 import LinkBoard from './components/LinkBoard';
 
 const App = () => {
-  return(
+  return (
     <div>
       <Router>
         <SideProvider>
-        <Header />  
-        <LinkBoard />
-        <Side />
-        <Routes>
-          <Route path='Ecommerce/' element={<Home />} />
-          <Route path='Ecommerce/product/' element={<Product />} />
-        </Routes>
-        <Footer />
+          <Header />  
+          <LinkBoard />
+          <Side />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/product' element={<Product />} />
+          </Routes>
+          <Footer />
         </SideProvider>
       </Router>
     </div>
