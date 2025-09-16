@@ -5,7 +5,6 @@ import Body from '../components/Body';
 const Home = () => {
   return(
     <div>
-      <div>this is</div>
       <Hero />
       <Body />
     </div>

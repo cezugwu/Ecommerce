@@ -114,7 +114,7 @@ const Product = () => {
   const [size, setSize] = useState('S');
 
   return (
-    <div className="bg-white py-20 px-4">
+    <div className="bg-white py-28 px-4">
       <div className="flex flex-col md:flex-row gap-16 md:items-center">
         <div className="w-full md:w-[300px] flex justify-center">
           <div className="contain">
