@@ -9,6 +9,8 @@ import Footer from './components/Footer';
 import LinkBoard from './components/LinkBoard';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import Success from './components/Success';
+import Fail from './components/Fail';
 
 const App = () => {
   return (
@@ -22,6 +24,8 @@ const App = () => {
             <Route path='/product' element={<Product />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path='/success' element={<Success />} />
+            <Route path='/fail' element={<Fail />} />
           </Routes>
           <Footer />
         </SideProvider>

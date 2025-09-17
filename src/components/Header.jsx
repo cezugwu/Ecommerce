@@ -24,7 +24,7 @@ const Header = () => {
           <input type="text" className='border border-slate-500 rounded-md w-[300px] h-[35px] outline-none px-2 pl-10 font-jost text-sm' name="" id="" />
         </div>
       </div>
-      <div className='w-full flex px-4 justify-between bg-white items-center py-3'>
+      <div className='w-full flex px-4 justify-between bg-white items-center h-13'>
         <div className='flex font-bold gap-1 text-[1.1em] items-center'>
           <ShoppingBag strokeWidth={2.5} />
           <div>Ecommerce</div>
@@ -42,9 +42,9 @@ const Header = () => {
 
         <div className='flex gap-4 items-center'>
           <Search className='lg:hidden text-slate-800' strokeWidth={1.5} onClick={() => setXOpen(true)} />
-          <div className='relative w-[300px] h-[35px] hidden lg:block'>
+          <div className='relative w-[310px] h-9 hidden lg:block'>
               <Search className='absolute top-1/2 -translate-y-1/2 left-2 text-slate-800' strokeWidth={1.5} />
-              <input type="text" className='border border-slate-500 rounded-md w-[300px] h-[35px] outline-none px-2 pl-10 font-jost text-sm' name="" id="" />
+              <input type="text" className='border border-slate-500 rounded-md w-[310px] h-9 outline-none px-2 pl-10 font-jost text-sm' name="" id="" />
           </div>
           <ShoppingCart strokeWidth={1.5} />
           <CircleUserRound strokeWidth={1.5} />
