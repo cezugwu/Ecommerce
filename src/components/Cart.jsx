@@ -1,5 +1,6 @@
-import { Minus, Plus, X } from "lucide-react";
+import { ChevronRight, Minus, Plus, X } from "lucide-react";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const Cart = () => {
@@ -32,16 +33,22 @@ const Cart = () => {
         boxRef.current.scrollTop = scrollTop.current - walk;
         }
     }
+
+    const navigate = useNavigate();
     return(
         <div className="mt-20 font-jost">
-            <div className="py-2 font-semibold text-[1.3em]">Cart</div>
-            <div className="flex justify-around flex-col md:flex-row gap-10 md:gap-4 bg-white px-2 py-4">
+            <div className="py-2 px-4">
+                <div className="font-semibold text-[1.2em]">Cart</div>
+                <div className='flex items-center text-sm tracking-[0.5px]'><span className='hover:underline cursor-pointer select-none' onClick={() => {navigate("../"); window.scrollTo(0, 0)}} >Ecommerce</span> <ChevronRight className='size-5 mt-[1px]' strokeWidth={1.5}/> <span className='font-light'>Cart</span></div>
+            </div>
+            <div className="flex justify-around flex-col md:flex-row gap-10 md:gap-4 bg-white px-2">
                 <div className="w-full md:w-[60%] flex items-center justify-center">
                     <div className="w-[100%]">
                         <div className="py-2 font-medium text-[1.2em]">Your cart</div>
                         <div className="border w-full h-0 border-gray-400"></div>
-                        <div ref={boxRef} onMouseDown={mouseDown} onMouseMove={mouseMove} onMouseUp={mouseUp} onMouseLeave={mouseLeave} className={`${grab ? 'cursor-grabbing' : 'cursor-grab'} h-[60vh] md:h-[300px] scrollbar-hide text-[0.9em] space-y-2 overflow-auto`}>
-                            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((items, index) => 
+                        <div ref={boxRef} onMouseDown={mouseDown} onMouseMove={mouseMove} onMouseUp={mouseUp} onMouseLeave={mouseLeave} className={`${grab ? 'cursor-grabbing' : 'cursor-grab'} min-h-[300px] scrollbar-hide text-[0.9em] space-y-2 overflow-auto`} 
+                        style={{ height: "calc(100vh - 230px)" }}>
+                            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((items, index) => 
                             <div key={index} className="flex items-center gap-4 justify-between mt-2">
                                 <div className="flex gap-4 items-center">
                                     <img className="w-20 h-20 object-fit" src="https://ae-pic-a1.aliexpress-media.com/kf/Sdfa1fb3090d64b43a802245feb2678c7H.jpg_960x960q75.jpg_.avif" alt="" />
@@ -86,7 +93,7 @@ const Cart = () => {
                         <p>$ 100.00</p>
                     </div>
 
-                    <div className="text-center bg-black text-white py-[8px] rounded-md font-light cursor-pointer select-none">Checkout</div>
+                    <div className="text-center bg-black text-white py-[8px] rounded-md font-light cursor-pointer select-none" onClick={() => {navigate("../checkout"); window.scrollTo(0, 0)}}>Checkout</div>
 
                     <div className="text-center underline text-[0.95em] cursor-pointer select-none">Continue shopping</div>
                 </div>

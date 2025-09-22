@@ -11,6 +11,7 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import Success from './components/Success';
 import Fail from './components/Fail';
+import Search from './components/Search';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
             <Route path='/checkout' element={<Checkout />} />
             <Route path='/success' element={<Success />} />
             <Route path='/fail' element={<Fail />} />
+            <Route path='/search' element={<Search />} />
           </Routes>
           <Footer />
         </SideProvider>

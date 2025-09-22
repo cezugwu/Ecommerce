@@ -1,5 +1,6 @@
-import { CircleChevronLeft, CircleChevronRight, Scissors, SquarePen } from 'lucide-react';
+import { ChevronRight, CircleChevronLeft, CircleChevronRight, Scissors, SquarePen } from 'lucide-react';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const items = [
     "https://ae-pic-a1.aliexpress-media.com/kf/Sdfa1fb3090d64b43a802245feb2678c7H.jpg_960x960q75.jpg_.avif",
@@ -86,9 +87,14 @@ const Checkout = () => {
     };
   }, []);
 
+  const navigate = useNavigate();
+
     return(
         <div className='mt-20 font-jost'>
-            <div className="py-2 font-semibold text-[1.3em] px-4">Checkout</div>
+            <div className="py-2 px-4">
+                <div className="font-semibold text-[1.2em]">Checkout</div>
+                <div className='flex items-center text-sm tracking-[0.5px]'><span className='hover:underline cursor-pointer select-none' onClick={() => {navigate("../"); window.scrollTo(0, 0)}} >Ecommerce</span> <ChevronRight className='size-5 mt-[1px]' strokeWidth={1.5}/> <span className='font-light'>Checkout</span></div>
+            </div>
 
             <div className='flex flex-col md:flex-row bg-white px-4 gap-8 items-center py-4 pb-12'>
                 <div className='w-full md:w-[60%]'>
@@ -150,7 +156,7 @@ const Checkout = () => {
                             <p>$ 100.00</p>
                         </div>
 
-                        <div className="text-center bg-black text-white py-[8px] rounded-md font-light cursor-pointer select-none">Place Order</div>
+                        <div className="text-center bg-black text-white py-[8px] rounded-md font-light cursor-pointer select-none" onClick={() => {navigate("../success"); window.scrollTo(0, 0)}}>Place Order</div>
                     </div>
                 </div>
             </div>

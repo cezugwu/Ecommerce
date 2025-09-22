@@ -1,6 +1,26 @@
 import { useRef, useState } from 'react';
 
-const featured = [
+const recommend = [
+  {
+    title: "Plain Black Tee",
+    price: "$22",
+    image: "https://ae-pic-a1.aliexpress-media.com/kf/S80c0995631954fbbbf7df2c9db498250Y.jpg_960x960q75.jpg_.avif"
+  },
+  {
+    title: "White Polo Classic",
+    price: "$30",
+    image: "https://ae-pic-a1.aliexpress-media.com/kf/S80c0995631954fbbbf7df2c9db498250Y.jpg_960x960q75.jpg_.avif"
+  },
+  {
+    title: "Polo Shirt (Transparent)",
+    price: "$28",
+    image: "https://ae-pic-a1.aliexpress-media.com/kf/S80c0995631954fbbbf7df2c9db498250Y.jpg_960x960q75.jpg_.avif"
+  },
+  {
+    title: "Classic White Polo Collared",
+    price: "$35",
+    image: "https://ae-pic-a1.aliexpress-media.com/kf/S80c0995631954fbbbf7df2c9db498250Y.jpg_960x960q75.jpg_.avif"
+  },
   {
     title: "Plain Black Tee",
     price: "$22",
@@ -54,20 +74,20 @@ const Recommend = () => {
 
     return(
       <div>
-        <div className='space-y-2'>
+        <div className='space-y-2 px-4'>
           <h1 className='font-semibold'>You might also like</h1>
           <p className='text-[0.8em] font-medium text-gray-500'>SIMILAR PRODUCTS</p>
         </div>
         <div onMouseDown={(e) => mouseDown(e, boxRef)} onMouseMove={(e) => mouseMove(e, boxRef)} onMouseUp={mouseUp} onMouseLeave={mouseLeave}
         ref={boxRef} className={`${grab ? 'cursor-grabbing' : 'cursor-grab'} w-full overflow-auto scrollbar-hide mt-10`}>
-        <div className='flex gap-12 w-fit mx-auto p-4'>
-            {featured.map((item, index) => 
-            <div key={index} className='w-[150px] space-y-1'>
-                <img src={item.image} className='w-full h-[200px] object-cover' />
-                <p className='capitalize font-medium text-[0.95em]'>{item.title}</p>
-                <div className='flex gap-8 items-center'>
-                <div className='uppercase border w-fit px-2 rounded-full text-[0.85em] font-medium'>In stock</div>
-                <div className='font-light text-[0.95em]'>{item.price}</div>
+        <div className='flex gap-8 w-fit mx-auto p-4'>
+            {recommend.map((item, index) => 
+            <div key={index} className='w-[140px] space-y-1 text-[0.9em]'>
+                <img src={item.image} className='w-full h-[150px] object-cover' />
+                <h1 className='capitalize font-medium'>{item.title}</h1>
+                <div className='flex gap-4 items-center'>
+                  <div className='uppercase border w-fit px-2 rounded-full text-[0.85em] font-medium'>In stock</div>
+                  <div className='font-light'>{item.price}</div>
                 </div>
             </div>
             )}

@@ -114,8 +114,8 @@ const Product = () => {
   const [size, setSize] = useState('S');
 
   return (
-    <div className="bg-white py-28 px-4">
-      <div className="flex flex-col md:flex-row gap-16 md:items-center">
+    <div className="bg-white py-28">
+      <div className="flex flex-col md:flex-row gap-16 md:items-center px-4">
         <div className="w-full md:w-[300px] flex justify-center">
           <div className="contain">
             <div onMouseDown={mouseDown} onMouseMove={mouseMove} onMouseUp={mouseUp} onMouseLeave={mouseLeave} ref={boxRef} className={`${grab ? 'cursor-grabbing' : 'cursor-grab'} sliderbox`}>
@@ -174,7 +174,7 @@ const Product = () => {
         </div>
       </div>
 
-      <div className="py-10">
+      <div className="py-10 px-4">
         <h1 className="font-jost font-semibold mt-10 py-4">Detail</h1>
         <p>
           Elevate your everyday style with our Men’s Black T-Shirt, the ultimate wardrobe essential for modern men. Crafted with meticulous attention to detail and designed for all-day comfort, this versatile piece is a timeless addition to your collection.
