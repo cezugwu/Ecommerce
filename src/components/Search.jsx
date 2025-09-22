@@ -184,7 +184,7 @@ const Search = () => {
                   </div>
                   <div className='result grid gap-4'>
                   {recommend.map((item, index) => 
-                      <div className='mx-auto text-[0.9em] space-y-2' key={index}>
+                      <div onClick={() => {navigate("../product"); window.scrollTo(0, 0);}} className='mx-auto text-[0.9em] space-y-2' key={index}>
                           <img src={item.image} className='w-40 h-44 p-1 object-cover' />
                           <h1 className='capitalize font-medium'>{item.title}</h1>
                           <div className='flex gap-4 items-center'>
