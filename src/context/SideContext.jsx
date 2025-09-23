@@ -9,7 +9,7 @@ const SideProvider = ({children}) => {
         setOpen(!open);
     }
     return(
-        <sideContext.Provider value={{open, closeOpen}}>
+        <sideContext.Provider value={{open, setOpen, closeOpen}}>
             {children}
         </sideContext.Provider>
     );

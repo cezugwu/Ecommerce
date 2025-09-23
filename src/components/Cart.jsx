@@ -41,10 +41,10 @@ const Cart = () => {
                 <div className="font-semibold text-[1.2em]">Cart</div>
                 <div className='flex items-center text-sm tracking-[0.5px]'><span className='hover:underline cursor-pointer select-none' onClick={() => {navigate("../"); window.scrollTo(0, 0)}} >Ecommerce</span> <ChevronRight className='size-5 mt-[1px]' strokeWidth={1.5}/> <span className='font-light'>Cart</span></div>
             </div>
-            <div className="flex justify-around flex-col md:flex-row gap-10 md:gap-4 bg-white px-2">
+            <div className="flex justify-around flex-col md:flex-row gap-10 md:gap-4 bg-white px-2 py-5">
                 <div className="w-full md:w-[60%] flex items-center justify-center">
                     <div className="w-[100%]">
-                        <div className="py-2 font-medium text-[1.2em]">Your cart</div>
+                        <div className="py-2 font-medium text-[1.2em] pb-4">Your cart</div>
                         <div className="border w-full h-0 border-gray-400"></div>
                         <div ref={boxRef} onMouseDown={mouseDown} onMouseMove={mouseMove} onMouseUp={mouseUp} onMouseLeave={mouseLeave} className={`${grab ? 'cursor-grabbing' : 'cursor-grab'} min-h-[300px] scrollbar-hide text-[0.9em] space-y-2 overflow-auto`} 
                         style={{ height: "calc(100vh - 230px)" }}>

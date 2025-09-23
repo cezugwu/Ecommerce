@@ -6,7 +6,7 @@ const sizes = ['S', 'M', 'X', 'XL', 'XXL'];
 const Filter = ({fil, setFil, size, setSize, q, setQ}) => {
     return(
         <div className={`${fil && 'containfilter'} text-[0.95em]`}>
-            <div className={`${fil ? 'filter left-0' : 'left-[-100%]'} duration-300`}>
+            <div className={`${fil ? 'filter left-0' : 'left-[-100%]'} duration-500`}>
                 <div className='cursor-pointer select-none flex w-full justify-between items-center py-2 px-4'><h1 className='font-medium'>Filter</h1> <X onClick={() => setFil(!fil)} className='size-5' strokeWidth={2} /></div>
 
                 <div className='border w-full h-0 border-gray-400'></div>

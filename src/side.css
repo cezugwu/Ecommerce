@@ -1,20 +1,6 @@
-@media screen and (max-width: 200px) {
-    .side {
-        width: 200px;
-        background-color: brown;
-    }
-}
-
-@media screen and (min-width: 200px) {
-    .side {
-        width: 250px;
-        background-color: brown;
-    }
-}
-
 .side .item {
     position: relative;
-    left: 50%;
+    left: 60%;
     filter: blur(10px);
     filter: opacity(0%);
     animation: slide 1s ease-in-out forwards;
@@ -32,11 +18,11 @@
     animation-delay: 0s;
 }
 .side .item2 {
-    animation-delay: 0.1s;
-}
-.side .item3 {
     animation-delay: 0.2s;
 }
+.side .item3 {
+    animation-delay: 0.4s;
+}
 .side .item4 {
-    animation-delay: 0.3s;
+    animation-delay: 0.6s;
 }
